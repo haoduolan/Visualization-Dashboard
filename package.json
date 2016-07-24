@@ -1,0 +1,20 @@
+{
+  "name": "litmus",
+  "version": "1.0.0",
+  "description": "a visualization dashboard",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://haoduolan@bitbucket.org/haoduolan/visualizationdashboard.git"
+  },
+  "author": "lanyang",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/haoduolan/visualizationdashboard#readme",
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "^4.14.0"
+  }
+}
