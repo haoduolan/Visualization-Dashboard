@@ -1,6 +1,18 @@
 <% include ./partials/header %>
 
-<h1> This is landing page </h1>
 
+<div class="container">
+    <% if(!currentUser) { %>
+      <h4> You need to login to see the chart. </h4>
+    <% } else { %>
+    <script type="text/javascript" src="scripts/chart.js"></script>
+    <script type="text/javascript" src="scripts/mqtt_client.js"></script>
+        <div ng-app="LanApp">
+    	<div id="controllerId" class="container" ng-controller="MainCtrl">
+    	<nvd3 options="options" data="data"></nvd3>
+  		</div>
+		</div>              
+    <% } %>
+</div>
 
 <% include ./partials/footer %>

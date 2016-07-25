@@ -1,4 +1,4 @@
-var app = angular.module('plunker', ['nvd3'])
+var app = angular.module('LanApp', ['nvd3'])
 
 .controller('MainCtrl', function($scope) {
     $scope.options = {
@@ -23,21 +23,13 @@ var app = angular.module('plunker', ['nvd3'])
         }
     };
     
-    $scope.options1 = angular.copy($scope.options);
-    $scope.options1.chart.duration = 0;
-    $scope.options1.chart.yDomain = [-1,1];
-    
-    $scope.data = [{ values: [], key: 'Random Walk' }];
-        
-    $scope.run = true;
-    
+    $scope.data = [{ values: [], key: 'Received time-series data' }];
+    // $scope.run = true;
     var x = 0;
-    setInterval(function(){
-	    if (!$scope.run) return;
-	    $scope.data[0].values.push({ x: x,	y: Math.random() - 0.5});
-      if ($scope.data[0].values.length > 20) $scope.data[0].values.shift();
-	    x++;
-	    
-      $scope.$apply(); // update both chart
-    }, 500);        
+    $scope.addData = function(d) {
+        $scope.data[0].values.push({x: x, y: d});
+        if ($scope.data[0].values.length > 20) $scope.data[0].values.shift();
+        x++;
+    }
+           
 });

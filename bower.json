@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    
+    "angular-nvd3": "^1.0.8",
+    "angular-nvd3.min": "https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.8/angular-nvd3.min.js"
   }
 }
